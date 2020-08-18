@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Success Input</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+
+    <style>
+      .alert {
+        background: green;
+        padding: 1rem;
+        border-radius: 5px;
+        color: white;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Successful Input!</h1>
+      <p>Files processed with the following details :<br /></p>
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+      <form action="/convert" method="GET">
+        <!-- try p tags too -->
+        <label>Urls entered : {{URLS}}</label>
+        <label>Margin for the Table Rows : {{MIN_ROWS}}</label>
+        <label>Maximum number of Tables to be Extracted : {{MAX_TABLES}}</label>
+        <label>Convert to Excel? : {{EXCEL}}</label>
+
+        <input type="submit" value="Results" />
+      </form>
+    </div>
+
+    <div class="container">
+      <h4>This app was created by Farhan Khan &copy;</h4>
+      <p>
+        Feel free to visit my github repository at
+        <a href="https://github.com/khanfarhan10/SimpleCalcEvalPython"
+          >SimpleCalcEvalPython</a
+        >
+        to get a better understanding and the working code documentation for
+        this app.
+      </p>
+    </div>
+  </body>
+</html>

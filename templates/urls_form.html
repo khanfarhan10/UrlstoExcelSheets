@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>UrltoExcel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+
+    <style>
+      .alert {
+        background: green;
+        padding: 1rem;
+        border-radius: 5px;
+        color: white;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Convert Tables from URLs to Excel Sheets and CSVs!</h1>
+      <p>
+        This utility tool allows you to convert tables scraped from webpages to
+        Excel Workbook containing all the tables that you want as separate
+        Sheets!<br />
+        Also, you can save your tables to csv files and download them as zip
+        files!
+        <!--
+      </p>
+      
+      <p>
+        -->
+      </p>
+    </div>
+
+    <div class="container">
+      <form>
+        <label for="max_tables"
+          >Maximum Tables to Retrieve from each URL:<input
+            type="number"
+            id="max_tables"
+            maxlength="4"
+            size="4"
+            value="5"
+            name="max_tables"
+          />
+          <!--<button onclick="incrementByOneFunction()">+1</button><--></label
+        >
+
+        <label for="min_rows"
+          >Minimum Number of Rows in each Table for Eligibility:<input
+            type="number"
+            id="min_rows"
+            maxlength="4"
+            size="4"
+            value="10"
+            name="min_rows"
+          />
+          <!--<button onclick="incrementByOneFunction()">+1</button><--></label
+        >
+
+        <script>
+          function incrementByOneFunction() {
+            document.getElementById("max_tables").stepUp(1);
+          }
+        </script>
+      </form>
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+      <form action="/urlhome" method="POST">
+        <label for="urls">URLS</label>
+        <input
+          type="text"
+          placeholder="Enter as many urls you wish to scrape separated by commas (e.g. abc.org,xyz.com etc.)"
+          class="u-full-width"
+          name="urls"
+        />
+
+        <!--<p>Click the button to increment the value of the number field by 5 (each time you click).</p>-->
+
+        <!--
+        <label for="excel">Excel</label><br />
+        <input type="checkbox" name="excel" value="Yes" />
+
+        <label for="csv">CSVs</label><br />
+        <input type="checkbox" name="csv" value="Yes" />
+
+        <br />
+        <input type="submit" value="Submit" />
+        -->
+
+        <label class="checkbox-inline">
+          <input type="checkbox" name="excel" value="Yes" checked />Excel
+        </label>
+        <!--
+        <label class="checkbox-inline">
+          <input type="checkbox" name="csv" value="Yes"  />CSVs
+        </label>
+        -->
+
+        <input type="submit" value="Get Results" id="calc_btn" />
+        <br />
+        <div class="alert">
+          {{ results }}
+        </div>
+      </form>
+    </div>
+
+    <div class="container">
+      <h4>This app was created by Farhan Khan &copy;</h4>
+      <p>
+        Feel free to visit my github repository at
+        <a href="https://github.com/khanfarhan10/SimpleCalcEvalPython"
+          >SimpleCalcEvalPython</a
+        >
+        to get a better understanding and the working code documentation for
+        this app.
+      </p>
+      <p>
+        <strong>Note:</strong> The stepUp() method is not supported by Internet
+        Explorer.
+      </p>
+    </div>
+  </body>
+</html>
+
+<!-- a comment in html -->
+<!--
+<html>
+<head>
+    <title>upload</title>
+</head>
+<body bgcolor="#b8bdc4">
+<div align="center">
+    <h1>PDF SPLITTER</h1>
+    <hr><br>
+    <form action = "/success" method = "post" enctype="multipart/form-data">
+        Start Page: <br>
+        <input type ="text" name="start" required><br><br>
+        End Page: <br>
+        <input type=text" name="end" required><br><br>
+        You chose file: <br>
+        <input type="file" name="file" required /><br><br>
+        <input type = "submit" value="Upload">
+    </form>
+</div>
+</body>
+</html>
+-->
+<!--  for checkbox
+<form action="/action_page.php" method="get">
+  <input type="checkbox" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" name="vehicle3" value="Boat" checked>
+  <label for="vehicle3"> I have a boat</label><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+w3 schools runner
+https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_form_checkbox
+-->
+<!--
+inline checkboxes
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Form control: inline checkbox</h2>
+    <p>The form below contains three inline checkboxes:</p>
+    <form>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="">Option 1
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="">Option 2
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="">Option 3
+      </label>
+    </form>
+  </div>
+
+</body>
+
+</html>
+-->
+
+<!--
+adjustable size textarea
+<textarea rows="4" cols="50" name="comment" form="usrform">
+Enter text here...</textarea>
+-->
